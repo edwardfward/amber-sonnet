@@ -41,3 +41,8 @@ venv.bak/
 __pycache__/
 *.py[cod]
 *$py.class
+
+
+#Azurite files and blobs
+__blob*
+__azurite*
