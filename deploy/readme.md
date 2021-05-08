@@ -1,4 +1,4 @@
-# Azure ARM Templates
+# Azure CLI Deployment Steps
 
 ## 1. Setup Azure CLI
 
