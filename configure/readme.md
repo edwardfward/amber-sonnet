@@ -1,1 +1,4 @@
-# Configuring your development environment
+# Configuring development environment
+## Windows
+## Mac
+## Linux
