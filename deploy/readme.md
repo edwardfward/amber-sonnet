@@ -36,14 +36,27 @@ az account list-locations --query "sort_by([].{DisplayName:displayName, Name:nam
 You will need to use your selected region more than once. Replace the region with your selected region name and set it as an environmental variable:
 
 ```shell
-echo -n "Enter your deployment region (i.e. centralus): "
+echo -n "Enter deployment regions (i.e. centralus): "
 read RG_LOCATION
-
-echo "You will deploy this app to the Azure $RG_LOCATION region"
 ```
 
+Set the resource group name. Resource group names do _not_ need to be globally unique:
 
+```shell
+echo -n "Enter the name of your resource group, does not need to be globally unique: "
+read RG_NAME
+```
 
+Create Azure resource group:
+
+```shell
+az group create --name $RG_NAME --location $RG_LOCATION
+```
+
+Setup a lock to prevent deletion of resources in resource group:
+
+```shell
+```
 
 ## 3. Create Azure Key Vault
 
